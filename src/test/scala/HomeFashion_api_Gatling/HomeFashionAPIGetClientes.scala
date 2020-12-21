@@ -23,7 +23,9 @@ class  HomeFashionAPIGetClientes extends Simulation {
     val listaTodosOsClientes = exec(
       http("Lista todos os clientes")
         .get("/cliente")
-        .basicAuth(login, senha))
+        .basicAuth(login, senha)
+        .check(status.is(200))
+    )
   }
 
   //Criando objeto ListarUmCliente
@@ -31,7 +33,10 @@ class  HomeFashionAPIGetClientes extends Simulation {
     val listarUmCliente = exec(
       http("Buscar cliente específico")
         .get("/cliente/234")
-        .basicAuth(login, senha))
+        .basicAuth(login, senha)
+        .check(status.is(200))
+        .check(jsonPath("$.cpf").is("90451718054"))
+    )
   }
 
   //Definindo cenários de teste
