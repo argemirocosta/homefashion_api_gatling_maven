@@ -1,6 +1,6 @@
-# Homefashion
+# Homefashion API Tests with Gatling
 
-Sales system for independent salespeople. 
+Tests for Homefashion API with Gatling.
 
 ## Getting started
 
