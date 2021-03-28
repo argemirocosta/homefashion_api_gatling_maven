@@ -17,7 +17,7 @@ class HomeFashionAPIPostClientes extends Simulation {
   val senha = "senha1"
 
   //Definindo varivável do arquivo csv com a massa de dados, com a estratégia circular, que lê em sequencia e recomeça caso acabem as linhas
-  val massaDeDados = csv("/Users/argemirocosta/Documents/gatling-maven-plugin-demo/src/test/resources/clientesparacadastro.csv").circular
+  val massaDeDados = csv("../resources/clientesparacadastro.csv").circular
 
   //Criando objeto ListaTodosOsClientes
   object CadastrarCliente {
